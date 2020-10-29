@@ -14,7 +14,11 @@ class CreateDevprosTable extends Migration
     public function up()
     {
         Schema::create('devpros', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('title');
+            $table->text('content');
+            $table->text('situation');
+            $table->integer('price');
             $table->timestamps();
         });
     }

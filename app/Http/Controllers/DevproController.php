@@ -14,7 +14,8 @@ class DevproController extends Controller
      */
     public function index()
     {
-        //
+        $develops = Devpro::all();
+        return view('devlist', ['develops'=>$develops]);
     }
 
     /**

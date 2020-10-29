@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/devpros', 'App\HTTP\Controllers\DevproController@index')->name('dev.list');
 Route::get('/', function () {
     return view('top');
 });
